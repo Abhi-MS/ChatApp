@@ -50,9 +50,8 @@ JavaScript
 
 ## Screenshots
 
-![Alt Text](Chatbox1.png)
+<img src="Chatbox1.png" alt="Screenshot 1 of App" width="400" />
+<img src="Chatbox2.png" alt="Screenshot 2 of App" width="400" />
+<img src="Chatbox3.png" alt="Screenshot 3 of App" width="400" />
 
-![Alt Text](Chatbox2.png)
-
-![Alt Text](Chatbox3.png)
 
