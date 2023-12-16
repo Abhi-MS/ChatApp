@@ -5,22 +5,19 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-image: var(--body-bg);
     font-family: Helvetica, sans-serif;
   }
   .chat-section{
     display: flex;
   flex-flow: column wrap;
-  justify-content: center;
-  width: 100%;
+  height: 80vh;
   margin: 25px 10px;
-  height: calc(100% - 50px);
   border: var(--border);
   border-radius: 5px;
   background: var(--msger-bg);
   box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
-  width: 70%;
+  width: 50%;
   }
   .chat-section img{
     height: 4rem;
@@ -36,6 +33,7 @@ html {
   .code{
     height: 6rem;
     background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+    align-items: start;
   }
 
   .message-area {
@@ -68,21 +66,42 @@ html {
   width: 50%;
   }
   .outgoing {
-    flex-direction: row-reverse;
-    float: right;
-    background-color:blanchedalmond;
+    background-color: #3cb371; 
+  color: #fff; 
+  border-radius: 10px; 
+  padding: 10px; 
+  margin-bottom: 10px;
+  width: fit-content;
+  justify-self: end;
   }
   .incoming{
-    background-color: rgb(195, 244, 246);
+    background-color: #6495ed;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px; 
+  margin-bottom: 10px;
+  width: fit-content;
+  justify-self: start;
   }
-  .textarea{
+  ul{
+    display: grid;
+    margin: 3rem;
+    padding: 0;
+    max-height: 300px; /* Set a maximum height for the chat window */
+    overflow-y: auto;
+  }
+  form{
+    display: block;
+    align-self: center;
+    justify-self: end;
+    margin-top: auto;
     padding: 10px;
   border:none;
   border-radius: 5px;
   font-size: 1em;
   }
 
-  .msger-send-btn {
+  form button {
     margin-left: 10px;
     background: rgb(0, 196, 65);
     color: #fff;
@@ -90,6 +109,6 @@ html {
     cursor: pointer;
     transition: background 0.23s;
   }
-  .msger-send-btn:hover {
+  form button:hover {
     background: rgb(0, 180, 50);
   }
