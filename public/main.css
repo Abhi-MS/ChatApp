@@ -1,13 +1,11 @@
-html {
-    box-sizing: border-box;
-  }
   body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: var(--body-bg);
+    background: linear-gradient(109.6deg, rgba(198, 233, 214, 0.93) 11.2%, rgb(154, 237, 156) 78.9%);
     font-family: Helvetica, sans-serif;
   }
+  
   .chat-section{
     display: flex;
   flex-flow: column wrap;
@@ -15,9 +13,10 @@ html {
   margin: 25px 10px;
   border: var(--border);
   border-radius: 5px;
-  background: var(--msger-bg);
+  background: white;
   box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
   width: 50%;
+  padding-bottom: 2rem;
   }
   .chat-section img{
     height: 4rem;
@@ -32,39 +31,11 @@ html {
   }
   .code{
     height: 6rem;
-    background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+    background-color: black;
     align-items: start;
+    width: 100%;
   }
-
-  .message-area {
-    flex: 1;
-    overflow-y: auto;
-    padding: 20px;
-    margin: 20px;
-    background-color: #fcfcfe;
-  }
-  .message-area h4{
-    margin: 20px;
-    align-self: center;
-  }
-  .message-area::-webkit-scrollbar {
-    width: 6px;
-  }
-  .message-area::-webkit-scrollbar-track {
-    background: #ddd;
-  }
-  .message-area::-webkit-scrollbar-thumb {
-    background: #bdbdbd;
-  }
-  .message{
-    display: flex;
-  align-items: flex-end;
-  text-align: justify;
-  margin-bottom: 10px;
-  padding: 15px;
-  border-radius: 15px;
-  width: 50%;
-  }
+  
   .outgoing {
     background-color: #3cb371; 
   color: #fff; 
@@ -83,7 +54,7 @@ html {
   width: fit-content;
   justify-self: start;
   }
-  ul{
+  #messages{
     display: grid;
     margin: 3rem;
     padding: 0;
@@ -93,22 +64,35 @@ html {
   form{
     display: block;
     align-self: center;
-    justify-self: end;
+    text-align: center;
     margin-top: auto;
     padding: 10px;
-  border:none;
-  border-radius: 5px;
-  font-size: 1em;
+    border:none;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
   }
 
-  form button {
-    margin-left: 10px;
-    background: rgb(0, 196, 65);
-    color: #fff;
-    font-weight: bold;
+  .btn {
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
     cursor: pointer;
-    transition: background 0.23s;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    background-color: #c2fbd7;
   }
-  form button:hover {
-    background: rgb(0, 180, 50);
-  }
+
+.btn:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
